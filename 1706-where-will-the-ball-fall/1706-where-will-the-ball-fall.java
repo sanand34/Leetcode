@@ -27,7 +27,7 @@ class Solution {
             
             val.put(c,Grid(mat,r+1,c+mat[r][c]));
             hmp.put(r,val);
-            return Grid(mat,r+1,c+mat[r][c]);
+            return val.get(c);
             
         }
             
