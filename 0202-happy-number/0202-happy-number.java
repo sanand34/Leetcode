@@ -6,13 +6,13 @@ class Solution {
         while(n>=3 && !hs.contains(n)){
             hs.add(n);
             int num=n;
-            int temp=0;
+            int sum=0;
             while(num>0){
-                temp+=(num%10)*(num%10);
+                sum+=(num%10)*(num%10);
                 num=num/10;
             }
 
-            n=temp;
+            n=sum;
         }
         if(n==1) return true;
         else return false;
