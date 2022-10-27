@@ -1,9 +1,10 @@
 class Solution {
     public int[] findBall(int[][] grid) {
+        
         int[] ans=new int[grid[0].length];
+        
         for(int i=0;i<grid[0].length;i++){
             ans[i]=Grid(grid,0,i);
-            
         }
         return ans;
     }
