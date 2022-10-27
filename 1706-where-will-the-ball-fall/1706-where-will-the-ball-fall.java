@@ -13,9 +13,8 @@ class Solution {
     }
     public int Grid(int[][] mat,int r,int c){
   
-       HashMap <Integer,Integer> temp=hmp.get(r);
         
-        if(temp!=null && temp.get(c)!=null) return temp.get(c);
+        if(hmp.get(r)!=null && hmp.get(r).get(c)!=null) return hmp.get(r).get(c);
         
         if(r==mat.length) return c;
         
@@ -27,7 +26,7 @@ class Solution {
             
             val.put(c,Grid(mat,r+1,c+mat[r][c]));
             hmp.put(r,val);
-            return val.get(c);
+            return hmp.get(r).get(c);
             
         }
             
