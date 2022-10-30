@@ -13,9 +13,8 @@ class Solution {
         ListNode odd=head;
         ListNode even=new ListNode(0);
         ListNode temp=even;
-        if(odd==null) return null;
-        if(odd.next==null) return head;
-        if(odd.next.next==null) return head;
+        if(odd==null || odd.next==null || odd.next.next==null) return head;
+       
         while(odd.next!=null && odd.next.next!=null){
             even.next=odd.next;
             even=even.next;
@@ -23,7 +22,7 @@ class Solution {
             odd=odd.next;
         }
        
-        if(even.next!=null && even.next.next!=null) 
+        if(even.next.next!=null) 
             even.next=even.next.next;
         else
             even.next=null;
